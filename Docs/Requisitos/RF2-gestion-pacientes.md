@@ -291,3 +291,6 @@ Con este módulo se busca mejorar la disponibilidad de la información, reducir 
 ## 📁 Módulo
 
 **RF2 - Gestión de Pacientes**
+## Verificación del pipeline
+
+Prueba de ejecución del pipeline mediante push en la rama RF2.

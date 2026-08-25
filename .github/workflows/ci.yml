@@ -6,6 +6,7 @@ on:
       - main
       - develop
       - "feature/**"
+
   pull_request:
     branches:
       - main
@@ -22,8 +23,16 @@ jobs:
       - name: Verificar estructura del proyecto
         run: |
           test -f README.md
-          test -d Docs
+          test -d Documentos
+          test -d Documentos/Requisitos
           test -d .github/workflows
+
+      - name: Verificar requerimientos funcionales
+        run: |
+          test -f "Documentos/Requisitos/RF1-gestión-usuarios.md"
+          test -f "Documentos/Requisitos/RF2-gestión-pacientes.md"
+          test -f "Documentos/Requisitos/RF3-gestión-citas.md"
+          echo "Requerimientos funcionales encontrados correctamente"
 
       - name: Verificar archivo del pipeline
         run: |
